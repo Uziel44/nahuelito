@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camping Nahuelito · Lamelehue, Neuquén</title>
+  <meta name="description" content="Camping Nahuelito: 10 hectáreas de bosque y lago en la Patagonia, a pocos kilómetros de Moquehue. Parcelas equipadas, dormis para 4 personas, proveeduría y excursiones.">
+  <meta name="theme-color" content="#064b8c">
+  <link rel="icon" type="image/jpeg" href="logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body data-page="camping">
+
+<!-- Iconos (sprite SVG) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-tent" viewBox="0 0 24 24"><path d="M3 20 12 4l9 16M12 4v16M8 20l4-7 4 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5M7 11.5h.01" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11 12 4l9 7M5 10v10h14V10M10 20v-6h4v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-fire" viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 .3 1.2.9 2 2 2 0-3-.5-5 1-8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 20v-1.5a3.5 3.5 0 0 0-3.5-3.5h-5A3.5 3.5 0 0 0 4 18.500V20M10 11a3.500 3.500 0 1 0 0-7 3.500 3.500 0 0 0 0 7ZM20 20v-1.500a3.500 3.500 0 0 0-2.500-3.350M15.500 4.200a3.500 3.500 0 0 1 0 6.600" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-bath" viewBox="0 0 24 24"><path d="M3 12h18v2a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5v-2ZM6 12V6a2 2 0 0 1 3.500-1.300M7 19l-1 2M17 19l1 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-sofa" viewBox="0 0 24 24"><path d="M5 11V8a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v3M3 13a2 2 0 0 1 4 0v2h10v-2a2 2 0 0 1 4 0v5H3v-5ZM6 18v2M18 18v2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-area" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s7-6.200 7-11.500A7 7 0 0 0 5 9.500C5 14.800 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="9.500" r="2.500" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.500 4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M12 4v15m0 0-6-6m6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12.040 2a9.900 9.900 0 0 0-8.480 15L2 22l5.150-1.510A9.900 9.900 0 1 0 12.040 2Zm0 1.800a8.100 8.100 0 1 1-4.230 15l-.300-.180-3.050.890.920-2.970-.200-.310A8.100 8.100 0 0 1 12.040 3.800Zm-3.100 3.700c-.160 0-.430.060-.660.310s-.860.840-.860 2.050.880 2.380 1 2.540c.120.160 1.710 2.730 4.200 3.720 2.070.820 2.490.660 2.940.620.450-.040 1.450-.590 1.650-1.160.200-.570.200-1.060.140-1.160-.060-.100-.220-.160-.460-.280s-1.450-.720-1.680-.800c-.220-.080-.390-.120-.550.120-.160.240-.630.800-.770.960-.140.160-.280.180-.520.060-.240-.120-1.020-.380-1.950-1.200-.720-.640-1.200-1.440-1.340-1.680-.140-.240-.020-.370.100-.490.110-.110.240-.280.360-.420.120-.140.160-.240.240-.400.080-.160.040-.300-.020-.420-.060-.120-.540-1.330-.760-1.810-.200-.470-.400-.400-.550-.410h-.470Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path d="M3 6h18v12H3zM3 7l9 6.500L21 7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="wrap header__in">
+    <a href="#inicio" class="brand" aria-label="Camping Nahuelito, ir al inicio">
+      <span class="brand__logo"><img src="logo.jpeg" alt="" width="56" height="56"></span>
+      <span class="brand__name">Nahuelito<small>Camping</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#camping">Camping</a>
+      <a href="#dormis">Dormis</a>
+      <a href="#lago">El lago</a>
+      <a href="#excursiones">Excursiones</a>
+      <a href="#galeria">Galería</a>
+      <a href="#servicios">Servicios</a>
+      <a href="casa.html">Casas</a>
+      <a href="#contacto" class="btn btn--sm btn--wa js-wa"><svg class="ic"><use href="#i-wa"/></svg> Reservar</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============ PORTADA ============ -->
+<section class="hero" id="inicio" aria-label="Portada">
+  <div class="hero__slides" id="heroSlides">
+    <div class="hero__slide is-active"><img src="img/25.jpg" alt="Costa rocosa del lago con cerros al fondo" fetchpriority="high"></div>
+    <div class="hero__slide"><img src="img/31.jpg" alt="Lago azul y bosque patagónico" loading="lazy"></div>
+    <div class="hero__slide"><img src="img/13.jpg" alt="Lago con islas y cielo abierto" loading="lazy"></div>
+    <div class="hero__slide"><img src="img/30.jpg" alt="Playa de arena a orillas del lago" loading="lazy"></div>
+    <div class="hero__slide"><img src="img/04.jpg" alt="Costa del lago con sombrilla y mesa" loading="lazy"></div>
+  </div>
+  <div class="hero__shade"></div>
+  <div class="hero__content wrap">
+    <p class="eyebrow eyebrow--light">Lamelehue · Neuquén · Patagonia Argentina</p>
+    <h1>Camping <em>Nahuelito</em></h1>
+    <p class="hero__lead">Diez hectáreas de bosque frente al lago, a pocos kilómetros de Moquehue. Parcelas equipadas, dormis y mucha naturaleza.</p>
+    <div class="hero__cta">
+      <a href="#camping" class="btn btn--light">Conocé el camping</a>
+      <a href="#contacto" class="btn btn--ghost">Consultar disponibilidad</a>
+    </div>
+  </div>
+  <button class="hero__arrow hero__arrow--prev" id="heroPrev" aria-label="Foto anterior"><svg class="ic"><use href="#i-left"/></svg></button>
+  <button class="hero__arrow hero__arrow--next" id="heroNext" aria-label="Foto siguiente"><svg class="ic"><use href="#i-right"/></svg></button>
+  <div class="hero__dots" id="heroDots" role="tablist" aria-label="Fotos de portada"></div>
+</section>
+
+<!-- ============ INTRO ============ -->
+<section class="intro section">
+  <div class="wrap intro__grid">
+    <div class="reveal">
+      <h2 class="intro__name">Camping<br>Nahuelito</h2>
+      <p class="place"><svg class="ic"><use href="#i-pin"/></svg> Lamelehue, Neuquén</p>
+    </div>
+    <div class="reveal">
+      <p class="lead">Un predio verde de <strong>10 hectáreas</strong> entre el bosque patagónico y la costa del lago, a pocos kilómetros de Moquehue y con el asfalto cada vez más cerca.</p>
+      <p>Pensado para quienes buscan descansar de verdad: caminos de tierra entre lengas y pinos, fogón a la noche, el lago a pocos pasos y espacio de sobra para disfrutarlo sin apuros.</p>
+      <ul class="stats">
+        <li><b>10</b><span>hectáreas</span></li>
+        <li><b data-cfg="parcelas">7</b><span>parcelas equipadas</span></li>
+        <li><b>2</b><span>dormis</span></li>
+        <li><b>4</b><span>lugares por dormi</span></li>
+      </ul>
+      <a href="#camping" class="btn btn--outline">Descubrí más <svg class="ic"><use href="#i-arrow"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CAMPING ============ -->
+<section class="stay" id="camping">
+  <div class="stay__bg"><img src="img/06.jpg" alt="" loading="lazy"></div>
+  <div class="wrap stay__in">
+    <h2 class="reveal">Más que un camping</h2>
+    <p class="stay__sub reveal">Parcelas equipadas dentro de un predio de 10 hectáreas, entre árboles nativos y a pasos del lago.</p>
+
+    <div class="offer offer--wide reveal">
+      <div class="offer__badge"><b data-cfg="parcelas">7</b><span>parcelas</span></div>
+      <div class="offer__photos">
+        <img src="img/07.jpg" alt="Carpa en una parcela rodeada de árboles" loading="lazy">
+        <img src="img/08.jpg" alt="Carpa roja entre los árboles" loading="lazy">
+      </div>
+      <div class="offer__body">
+        <h3><svg class="ic"><use href="#i-tent"/></svg> Parcelas de camping</h3>
+        <p>Cada parcela cuenta con farola, mesita y las comodidades para que armes tu campamento sin preocuparte por nada. Sombra, privacidad y mucho verde alrededor.</p>
+        <ul class="ticks ticks--2">
+          <li><svg class="ic"><use href="#i-check"/></svg> Farolas en las parcelas</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Mesita en cada parcela</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Entre árboles nativos</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Cerca de la costa del lago</li>
+        </ul>
+        <a href="#contacto" class="btn btn--sm btn--outline js-pick" data-pick="Camping (parcela)">Consultar parcela</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DORMIS ============ -->
+<section class="section" id="dormis">
+  <div class="wrap split">
+    <div class="split__media reveal">
+      <img src="img/14.jpg" alt="Dormi de madera junto al camino" loading="lazy">
+      <img src="img/16.jpg" alt="Dormi de madera entre los árboles" loading="lazy">
+    </div>
+    <div class="split__text reveal">
+      <p class="eyebrow">Para pocos pasajeros</p>
+      <h2>2 Dormis</h2>
+      <p class="lead">Dos pequeñas piezas de madera, una al lado de la otra, ideales para quienes quieren techo sin perder el contacto con el bosque.</p>
+      <ul class="ticks">
+        <li><svg class="ic"><use href="#i-check"/></svg> 2 dormis, uno junto al otro</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Hasta 4 lugares en cada uno</li>
+        <li><svg class="ic"><use href="#i-check"/></svg> Ideal para parejas, familias y grupos chicos</li>
+      </ul>
+      <a href="#contacto" class="btn btn--outline js-pick" data-pick="Dormi (hasta 4 personas)">Consultar dormi</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEYENDA DEL NAHUELITO ============ -->
+<section class="legend" id="leyenda" aria-labelledby="legendTitle">
+  <div class="wrap legend__in">
+    <div class="legend__logo reveal" aria-hidden="true">
+      <span class="legend__ring"></span>
+      <span class="legend__disc"><img src="logo.jpeg" alt="" loading="lazy"></span>
+    </div>
+    <div class="legend__text reveal">
+      <p class="eyebrow eyebrow--light">Una historia de la Patagonia</p>
+      <h2 id="legendTitle">La leyenda del Nahuelito</h2>
+      <p class="legend__lead">Cuentan que en las profundidades de los lagos andinos vive una criatura enorme, de cuello largo y lomo en forma de joroba, que asoma un instante y vuelve a desaparecer bajo el agua. La Patagonia la conoce como <strong>el Nahuelito</strong>.</p>
+      <p>Las primeras historias vienen de los pueblos originarios, que hablaban de seres misteriosos en el fondo de los lagos. Con los años, los relatos de viajeros y pobladores se multiplicaron: el Nahuelito llegó a la prensa, despertó la curiosidad de exploradores y científicos, y su fama recorrió todo el país desde el lago Nahuel Huapi.</p>
+      <ul class="legend__facts">
+        <li>Cuello largo y lomo en joroba</li>
+        <li>Nacida en el Nahuel Huapi</li>      </ul>
+      <p class="legend__note">Leyenda popular de la Patagonia: los relatos cambian según quién los cuente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="section section--dark" id="galeria">
+  <div class="wrap">
+    <header class="sec-head sec-head--light reveal">
+      <p class="eyebrow eyebrow--light">Fotos y videos</p>
+      <h2>Galería del camping</h2>
+      <p>El predio, el lago y los paisajes de la zona. Tocá una foto para verla en grande.</p>
+    </header>
+    <div class="gallery" id="gallery"><!-- generado por index.js --></div>
+  </div>
+</section>
+
+<!-- ============ EL LAGO ============ -->
+<section class="lake" id="lago">
+  <div class="lake__bg"><img src="img/30.jpg" alt="" loading="lazy"></div>
+  <div class="wrap lake__in reveal">
+    <p class="eyebrow eyebrow--light">A pasos del camping</p>
+    <h2>El lago</h2>
+    <p class="lake__lead">Aguas cristalinas, costa de piedra y arena, y el reflejo de las montañas desde la orilla. El lago es el corazón del complejo: para caminar, pescar, tomar mate o simplemente mirar.</p>
+    <div class="lake__thumbs">
+      <button class="thumb" data-lb="29" aria-label="Ampliar foto del lago"><img src="img/29.jpg" alt="Orilla del lago reflejando el bosque" loading="lazy"></button>
+      <button class="thumb" data-lb="03" aria-label="Ampliar foto de la playa"><img src="img/03.jpg" alt="Playa con montañas al fondo" loading="lazy"></button>
+      <button class="thumb" data-lb="12" aria-label="Ampliar foto de pesca"><img src="img/12.jpg" alt="Caña de pescar frente al lago" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXCURSIONES ============ -->
+<section class="section" id="excursiones">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Excursiones y actividades</p>
+      <h2>Viví la Patagonia</h2>
+      <p>Paseos y actividades para sumar a tu estadía, dentro del predio y en la zona de Moquehue.</p>
+    </header>
+
+    <div class="exp reveal">
+      <img src="img/29.jpg" alt="Caminata por la orilla del lago" loading="lazy">
+      <div class="exp__card"><h3>Caminatas</h3><p>Senderos y caminos de tierra para recorrer entre el bosque y la costa, con vistas abiertas al lago.</p></div>
+    </div>
+    <div class="exp exp--rev reveal">
+      <img src="img/12.jpg" alt="Caña de pescar frente al lago" loading="lazy">
+      <div class="exp__card"><h3>Pesca</h3><p>Llevá tu caña y pasá la tarde pescando con la montaña de fondo. Una excusa perfecta para desconectar.</p></div>
+    </div>
+    <div class="exp reveal">
+      <img src="img/15.jpg" alt="Caballo pastando entre los árboles" loading="lazy">
+      <div class="exp__card"><h3>Naturaleza en familia</h3><p>Un entorno tranquilo y abierto, ideal para ir con chicos: espacio para jugar, observar animales y moverse libremente.</p></div>
+    </div>
+    <div class="exp exp--rev reveal">
+      <img src="img/21.jpg" alt="Fogón encendido" loading="lazy">
+      <div class="exp__card"><h3>Fogón y noches de estrellas</h3><p>Cuando cae el sol, el predio se llena de silencio. Un buen fuego, algo rico para compartir y un cielo patagónico enorme.</p></div>
+    </div>
+    <p class="note reveal">¿Querés más ideas de paseos por la zona? Consultanos y te recomendamos según la época.</p>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="section" id="servicios">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Qué incluye cada opción</p>
+      <h2>Servicios</h2>
+    </header>
+    <div class="services services--2">
+      <article class="service reveal">
+        <svg class="ic ic--lg"><use href="#i-tent"/></svg>
+        <h3>Camping</h3>
+        <ul class="ticks">
+          <li><svg class="ic"><use href="#i-check"/></svg> Parcela equipada con mesita</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Iluminación con farola en cada parcela</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Electricidad</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Proveeduría de camping en el predio</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Acceso a la costa del lago</li>
+        </ul>
+      </article>
+      <article class="service reveal">
+        <svg class="ic ic--lg"><use href="#i-bed"/></svg>
+        <h3>Dormis</h3>
+        <ul class="ticks">
+          <li><svg class="ic"><use href="#i-check"/></svg> 2 dormis, hasta 4 lugares cada uno</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Electricidad</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Proveeduría de camping en el predio</li>
+          <li><svg class="ic"><use href="#i-check"/></svg> Acceso a la costa del lago</li>
+        </ul>
+      </article>
+    </div>
+    <p class="note reveal"><strong>Sobre el gas:</strong> por el momento se trabaja con garrafa; en la región se esperan obras de red de gas. Si necesitás algo puntual, consultanos.</p>
+  </div>
+</section>
+
+<!-- ============ CASAS (enlace) ============ -->
+<section class="banner">
+  <div class="banner__bg"><img src="img/17.jpg" alt="" loading="lazy"></div>
+  <div class="wrap banner__in reveal">
+    <div>
+      <p class="eyebrow eyebrow--light">También en el complejo</p>
+      <h2>Alquiler de casas</h2>
+      <p>Casas amplias para grupos y familias, con ficha, fotos y mapa de cada una.</p>
+    </div>
+    <a href="casa.html" class="btn btn--light btn--lg">Ver las casas <svg class="ic"><use href="#i-right"/></svg></a>
+  </div>
+</section>
+
+<!-- ============ MAPA ============ -->
+<section class="section section--tint" id="mapa">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Cómo llegar</p>
+      <h2>Ubicación del camping</h2>
+      <p>En Lamelehue, a pocos kilómetros de Moquehue, Neuquén. Al reservar te enviamos la ubicación exacta.</p>
+    </header>
+    <div class="map-single reveal">
+      <iframe id="mapFrame" title="Mapa de ubicación del camping" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <p class="map__cta reveal"><a href="#" class="btn btn--outline js-maps"><svg class="ic"><use href="#i-pin"/></svg> Abrir en Google Maps</a></p>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contacto">
+  <div class="wrap contact__grid">
+    <div class="reveal">
+      <p class="eyebrow eyebrow--light">Reservas y consultas</p>
+      <h2>Escribinos y armamos tu escapada</h2>
+      <p class="contact__lead">Contanos cuándo querés venir y cuántos son. Te respondemos con disponibilidad y tarifas.</p>
+      <a href="#" class="btn btn--wa btn--lg js-wa"><svg class="ic"><use href="#i-wa"/></svg> Escribir por WhatsApp</a>
+      <ul class="contact__list">
+        <li><svg class="ic"><use href="#i-wa"/></svg> <span class="js-phone"></span></li>
+        <li><svg class="ic"><use href="#i-pin"/></svg> <a href="#" class="js-maps">Camping El Nahuelito · Lamelehue, Neuquén</a></li>
+      </ul>
+    </div>
+
+    <form class="form reveal" id="contactForm" novalidate>
+      <h3>Formulario de consulta</h3>
+      <div class="form__row">
+        <label>Nombre<input type="text" name="nombre" autocomplete="name" required></label>
+        <label>Opción
+          <select name="alojamiento" id="selAloj">
+            <option>Camping (parcela)</option>
+            <option>Dormi (hasta 4 personas)</option>
+            <option>Todavía no sé</option>
+          </select>
+        </label>
+      </div>
+      <div class="form__row">
+        <label>Llegada<input type="date" name="llegada"></label>
+        <label>Salida<input type="date" name="salida"></label>
+        <label>Personas<input type="number" name="personas" min="1" max="30" value="2"></label>
+      </div>
+      <label>Mensaje<textarea name="mensaje" rows="3" placeholder="Contanos qué necesitás…"></textarea></label>
+      <button type="submit" class="btn btn--wa btn--lg"><svg class="ic"><use href="#i-wa"/></svg> Enviar consulta por WhatsApp</button>
+      <p class="form__hint">Se abre WhatsApp con tu consulta ya escrita; solo tenés que enviarla.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer__in">
+    <div class="footer__brand">
+      <span class="brand__logo brand__logo--lg"><img src="logo.jpeg" alt="Logo Camping Nahuelito" width="80" height="80" loading="lazy"></span>
+      <p>Camping Nahuelito<br>Lamelehue, Neuquén</p>
+    </div>
+    <nav class="footer__nav" aria-label="Pie de página">
+      <a href="#camping">Camping</a>
+      <a href="#dormis">Dormis</a>
+      <a href="#lago">El lago</a>
+      <a href="#excursiones">Excursiones</a>
+      <a href="#galeria">Galería</a>
+      <a href="casa.html">Casas</a>
+    </nav>
+    <a href="#" class="btn btn--wa js-wa"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp</a>
+  </div>
+  <p class="footer__copy">© <span id="year"></span> Camping Nahuelito · Todos los derechos reservados</p>
+</footer>
+
+<a href="#" class="fab js-wa" aria-label="Escribir por WhatsApp"><svg class="ic"><use href="#i-wa"/></svg></a>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Galería ampliada" hidden>
+  <button class="lb__btn lb__close" id="lbClose" aria-label="Cerrar"><svg class="ic"><use href="#i-close"/></svg></button>
+  <button class="lb__btn lb__prev" id="lbPrev" aria-label="Anterior"><svg class="ic"><use href="#i-left"/></svg></button>
+  <figure class="lb__fig"><img id="lbImg" alt=""><figcaption id="lbCount"></figcaption></figure>
+  <button class="lb__btn lb__next" id="lbNext" aria-label="Siguiente"><svg class="ic"><use href="#i-right"/></svg></button>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
